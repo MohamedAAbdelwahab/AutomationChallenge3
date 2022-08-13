@@ -18,7 +18,8 @@ public class Utils {
     @BeforeClass
     public WebDriver setup()
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\moham\\Desktop\\chromedriver.exe");
+        String chromeDriver=System.getProperty("user.dir")+"\\chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", chromeDriver);
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
